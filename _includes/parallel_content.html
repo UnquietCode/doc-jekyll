@@ -1,0 +1,49 @@
+<ul class="sections">
+    {% if page.title %}
+      <li id="title">
+          <div class="annotation">
+              <h1>{{page.title}}</h1>
+          </div>
+      </li>
+    {% endif %}
+
+    {% if page.content %}
+      <li id="section-0">
+        <div class="annotation">
+          <div class="pilwrap for-intro">
+            <a class="pilcrow" href="#section-0">&#182;</a>
+          </div>
+          {{ page.content }}
+        </div>
+        <div class="content">&nbsp;</div>
+      </li>
+    {% endif %}
+
+    {% if page.sections %}
+      {% for section in page.sections %}
+        <li id="section-{{forloop.index}}">
+          <div class="annotation">
+            {% if section['title'] %}
+              {% capture heading %} for-{{section['title']}}{% endcapture %}
+            {% else %}
+              {% capture heading %}{% endcapture %}
+            {% endif %}
+
+            <div class="pilwrap{{heading}}">
+              <a class="pilcrow" href="#section-{{forloop.index}}">&#182;</a>
+            </div>
+            
+            {{section['comment']}}
+          </div>
+                    
+          {% if section['code'] %}
+              {% capture code %}{{section['code']}}{% endcapture %}
+          {% else %}
+              {% capture code %}&nbsp;{% endcapture %}
+          {% endif %}
+          
+          <div class="content">{{code}}</div>
+        </li>         
+      {% endfor %}  
+    {% endif %}
+</ul>

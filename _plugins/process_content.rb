@@ -111,6 +111,7 @@ module Jekyll
         lines = lines[1..lines.length]
       end
 
+      title = nil if !title.nil? && title.empty?
       comment, code = parse_section(lines)
 
       if title.nil? && comment.nil? and code.nil?
