@@ -10,25 +10,6 @@
 
 <body>
   <div id="container">
-    <div id="background"></div>
-   
-    {% if site.pages.length > 1 %}
-      <ul id="jump_to">
-        <li>
-          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
-          <a class="small" href="javascript:void(0);">+</a>
-          <div id="jump_wrapper">
-          <div id="jump_page">
-            {% for page in site.pages %}
-              <a class="source" href="{{page.url}}">
-                {{page.title}}
-              </a>
-            {% endfor %}
-          </div>
-        </li>
-      </ul>
-    {% endif %}
-
     {% comment %}
       This is a hack for dynamic includes.
     {% endcomment %}
@@ -36,9 +17,9 @@
     {% if page.style == 'parallel' %}
       {% include parallel_content.html %}
     {% elsif page.style == 'linear' %}
-      {% include linear.html %}
+      {% include linear_content.html %}
     {% elsif page.style == 'classic' %}
-      {% include classic_content.html %}
+      {% include parallel_content.html %}
     {% endif %}
 </body>
 </html>
