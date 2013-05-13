@@ -8,9 +8,10 @@ Doc Jekyll is...
 How to use:
 -------------
 0. Add files to your project's directory (next to the 'alpha.md' and 'beta.md' files).
-1. make sure their templates are set to 'docco'
-2. make sure their styles are set to one of 'linear', 'paralell', or 'classic' (as in Docco)
-3. declare your code and comment sections in your files after the YAML front matter
+1. Adjust your _config.yml. Ensure that 'language' is set appropriately for your code snippets.
+2. make sure their templates are set to 'docco'
+3. make sure their styles are set to one of 'linear', 'paralell', or 'classic' (as in Docco) 
+4. declare your code and comment sections in your files after the YAML front matter
 
 Section Notation
 ---------------
