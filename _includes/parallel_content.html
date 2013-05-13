@@ -22,7 +22,11 @@
       {% if page.title %}
         <li id="title">
             <div class="annotation">
-                <h1>{{page.title}}</h1>
+              <div class="pilwrap for-h1">
+                <a class="pilcrow" href="#section-0">&#182;</a>
+              </div>
+
+              <h1>{{page.title}}</h1>
             </div>
         </li>
       {% endif %}
@@ -30,9 +34,6 @@
       {% if page.content %}
         <li id="section-0">
           <div class="annotation">
-            <div class="pilwrap for-intro">
-              <a class="pilcrow" href="#section-0">&#182;</a>
-            </div>
             {{ page.content | markdownify}}
             <hr/>
             <p></p>
@@ -44,26 +45,24 @@
       {% if page.sections %}
         {% for section in page.sections %}
             {% if section['title'] %}
-              {% capture heading %} for-{{section['title']}}{% endcapture %}
-
-            <li id="section-title">
-              <div class="annotation">
-              <div class="pilwrap{{heading}}">
-                <a class="pilcrow" href="#section-{{forloop.index}}">&#182;</a>
+              <li id="section-title">
+                <div class="annotation">
+                <div class="pilwrap for-h2">
+                  <a class="pilcrow" href="#section-{{forloop.index}}">&#182;</a>
+                </div>
+                <h2>{{section['title']}}</h2>
               </div>
-              <h2>{{section['title']}}</h2>
-            </div>
-
-            {% else %}
-              {% capture heading %}{% endcapture %}
-              {% capture section_title %}&nbsp;{% endcapture %}
             {% endif %}
 
             <li id="section-{{forloop.index}}">
               <div class="annotation">
-              <div class="pilwrap{{heading}}">
-                <a class="pilcrow" href="#section-{{forloop.index}}">&#182;</a>
-              </div>
+
+              {% if section['title'] == nil %}
+                <div class="pilwrap">
+                  <a class="pilcrow" href="#section-{{forloop.index}}">&#182;</a>
+                </div>
+              {% endif %}
+
               {{section['comment'] | markdownify}}
             </div>
                       
