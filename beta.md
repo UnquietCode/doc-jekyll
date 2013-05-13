@@ -8,7 +8,6 @@ This is the introductory text which will sit at the top of the page.
 
 
 
-
 ==================================
 
 This is the first commentary (left).
@@ -16,7 +15,6 @@ This is the first commentary (left).
 ---------------------------------
 
 int myMethod(x);
-
 
 
 
@@ -33,4 +31,3 @@ void myOtherMethod(y);
 =================================
 
 This part has no code, and is just commentary.
-
