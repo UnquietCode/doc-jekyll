@@ -54,13 +54,11 @@
             {{section['comment']}}
           </div>
                     
-          {% if section['code'] %}
-              {% capture code %}{{section['code']}}{% endcapture %}
-          {% else %}
-              {% capture code %}&nbsp;{% endcapture %}
-          {% endif %}
+          {% include code_snippet %}
           
-          <div class="content">{{code}}</div>
+          <div class="content">
+              {{code}}
+          </div>
         </li>         
       {% endfor %}  
     {% endif %}

@@ -25,7 +25,8 @@
     {% if page.sections %}
       {% for section in page.sections %}
         {{section['comment']}}
-        {{section['code']}}
+        {% include code_snippet %}
+        {{code}}
       {% endfor %}    
     {% endif %}
     

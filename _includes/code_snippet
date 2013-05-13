@@ -1,0 +1,9 @@
+{% if section['code'] %}
+  {% capture code %}
+    {% highlight java %}
+      {{section['code']}}
+    {% endhighlight %}
+  {% endcapture %}
+{% else %}
+  {% capture code %}&nbsp;{% endcapture %}
+{% endif %}
