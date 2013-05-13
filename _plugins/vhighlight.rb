@@ -7,6 +7,10 @@ module Jekyll
   			lang = Jekyll.configuration({})['language']  			
   			old_init.bind(self).(tag_name, "#{lang} #{markup}", tokens)
   		end
-	end
+
+  		def add_code_tags(code, lang)
+	        code = code.sub(/<pre>/,'<pre class="' + lang + '">')
+	    end
+    end
   end
 end

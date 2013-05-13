@@ -34,6 +34,8 @@
               <a class="pilcrow" href="#section-0">&#182;</a>
             </div>
             {{ page.content | markdownify}}
+            <hr/>
+            <p></p>
           </div>
           <div class="content">&nbsp;</div>
         </li>
@@ -41,18 +43,27 @@
 
       {% if page.sections %}
         {% for section in page.sections %}
-          <li id="section-{{forloop.index}}">
-            <div class="annotation">
-              {% if section['title'] %}
-                {% capture heading %} for-{{section['title']}}{% endcapture %}
-              {% else %}
-                {% capture heading %}{% endcapture %}
-              {% endif %}
+            {% if section['title'] %}
+              {% capture heading %} for-{{section['title']}}{% endcapture %}
 
+            <li id="section-title">
+              <div class="annotation">
               <div class="pilwrap{{heading}}">
                 <a class="pilcrow" href="#section-{{forloop.index}}">&#182;</a>
               </div>
-              
+              <h2>{{section['title']}}</h2>
+            </div>
+
+            {% else %}
+              {% capture heading %}{% endcapture %}
+              {% capture section_title %}&nbsp;{% endcapture %}
+            {% endif %}
+
+            <li id="section-{{forloop.index}}">
+              <div class="annotation">
+              <div class="pilwrap{{heading}}">
+                <a class="pilcrow" href="#section-{{forloop.index}}">&#182;</a>
+              </div>
               {{section['comment'] | markdownify}}
             </div>
                       

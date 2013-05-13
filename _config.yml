@@ -1,8 +1,8 @@
 name: This is the index title.
 description: "Something descriptionish."
-
-baseurl: /docs
 permalink: /:title
-pygments: true
 
-url: http://www.unquietcode.com/docs
+pygments: true
+language: java
+
+url: ..

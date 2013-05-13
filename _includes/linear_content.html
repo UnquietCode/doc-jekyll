@@ -21,8 +21,11 @@
         {% endif %} 
       </div>
    
-      {{ page.content | markdownify }}
-
+      {% if page.content %}
+        {{ page.content | markdownify }}
+        <hr/>
+        <p></p>
+      {% endif %}
       
       {% if page.sections %}
         {% for section in page.sections %}

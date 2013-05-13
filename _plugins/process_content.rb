@@ -117,6 +117,7 @@ module Jekyll
       if title.nil? && comment.nil? and code.nil?
         nil
       else
+        code = code.strip unless code.nil?
         { 'title' => title, 'comment' => comment, 'code' => code }
       end
     end

@@ -168,14 +168,10 @@ ul.sections {
 }
 
 .toc {
-  max-height: 0;
   overflow: hidden;
   text-align: center;
   font-size: 13px;
   line-height: 20px;
-  -moz-transition: max-height 1s;
-  -webkit-transition: max-height 1s;
-  transition: max-height 1s;
 }
   .header:hover .toc {
     max-height: 500px;
