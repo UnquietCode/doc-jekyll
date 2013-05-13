@@ -1,3 +1,8 @@
+# monkey-patch for Jekyll's built-in highlight tag which does the following:
+#
+#   1. inserts the documentation language from the site _config.yml
+#   2. changes <pre><code> blocks to remove the <code> tag
+#
 module Jekyll
   module Tags
 	class HighlightBlock	
