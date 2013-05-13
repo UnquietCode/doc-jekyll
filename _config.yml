@@ -1,8 +1,7 @@
-name: This is the index title.
-description: "Something descriptionish."
+# leave these alone
 permalink: /:title
-
 pygments: true
-language: java
 
+# fiddle with these
+language: java
 url: ..
