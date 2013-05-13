@@ -19,7 +19,7 @@ Section Notation
 * Sections are separated by a line which starts with at least 3 equal signs, '==='.
 * A section may contain a title inline, such as '===== Section One ===' or just '==== Section One'.
 * Comment and code are separated by a line which starts with at least 3 dashes, '---'.
-* The last section does not require a trailing divider ('===')
+* The last section does not require a trailing divider ('===').
 * See [alpha.md](alpha.md) for a richer example.
 
 ## Credits
