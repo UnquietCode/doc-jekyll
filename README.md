@@ -20,12 +20,11 @@ Section Notation
 * A section may contain a title inline, such as '===== Section One ===' or just '==== Section One'.
 * Comment and code are separated by a line which starts with at least 3 dashes, '---'.
 * The last section does not require a trailing divider ('===').
-* See [alpha.md](alpha.md) for a richer example.
-
-## Credits
-Docco is from Jeremy Ashkenas **//** Jekyll is from Tom Preston-Werner
-
-Doc Jekyll is from [Ben Fagin](https://github.com/UnquietCode)
+* See [beta.md](https://raw.github.com/UnquietCode/doc-jekyll/master/beta.md) for a richer example. (view the raw file)
 
 ## Thanks!
+Docco is from Jeremy Ashkenas **//** Jekyll is from Tom Preston-Werner  
+Doc Jekyll is from [Ben Fagin](https://github.com/UnquietCode)
+  
+&nbsp;  
 Peace, love, and code.
