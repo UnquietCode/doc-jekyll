@@ -1,7 +1,8 @@
 # leave these alone
 permalink: /:title
 pygments: true
+exclude: ['README.md']
 
-# fiddle with these
+# fiddle with these	
 language: java
 url: ..
