@@ -9,17 +9,16 @@
 </head>
 
 <body>
-  <div id="container">
-    {% comment %}
-      This is a hack for dynamic includes.
-    {% endcomment %}
+  {% comment %}
+    This is a hack for dynamic includes.
+  {% endcomment %}
 
-    {% if page.style == 'parallel' %}
-      {% include parallel_content.html %}
-    {% elsif page.style == 'linear' %}
-      {% include linear_content.html %}
-    {% elsif page.style == 'classic' %}
-      {% include parallel_content.html %}
-    {% endif %}
+  {% if page.style == 'parallel' %}
+    {% include parallel_content.html %}
+  {% elsif page.style == 'linear' %}
+    {% include linear_content.html %}
+  {% elsif page.style == 'classic' %}
+    {% include parallel_content.html %}
+  {% endif %}
 </body>
 </html>
