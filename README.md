@@ -4,6 +4,7 @@ Doc Jekyll is...
 * based on the templates used in [Docco](http://jashkenas.github.io/docco/)
 * a [Jekyll](http://jekyllrb.com/) project, ready to compile
 
+View the pre-compiled example pages [here](http://unquietcode.github.io/doc-jekyll).
 
 How to use:
 -------------
